@@ -1,0 +1,4 @@
+<% @prs.each do |pr| %>
+github_pullrequest_stats{reposirotry="<%= pr[:name] %>", status="open"} <%= pr[:open] %>
+github_pullrequest_stats{reposirotry="<%= pr[:name] %>", status="closed"} <%= pr[:closed] %>
+<% end %>
